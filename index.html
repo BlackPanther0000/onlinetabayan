@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Tambayan - All-in-One</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="auth-section" id="login-form">
+            <input type="text" id="username" placeholder="👤 Username">
+            <input type="password" id="password" placeholder="🔒 Password">
+            <button class="btn-login" onclick="login()">Sign In</button>
+            <div class="auth-links">
+                <a href="#" onclick="showSection('signup')">Create Account</a>
+            </div>
+        </div>
+        <div id="user-welcome" style="display:none; color:white;"></div>
+    </header>
+
+    <main class="hero-section">
+        <div class="glass-card">
+            <img src="onlinetambayan.png" alt="Logo" class="logo">
+            
+            <nav class="main-nav">
+                <button class="nav-item" onclick="showSection('home')">🏠 Home</button>
+                <button class="nav-item" onclick="showSection('movies')">🎬 Movies</button>
+                <button class="nav-item" onclick="showSection('music')">🎵 Music</button>
+                <button class="nav-item" onclick="showSection('shopping')">🛒 Shopping</button>
+                <button class="nav-item" onclick="showSection('about')">ℹ️ About</button>
+            </nav>
+
+            <div id="display-area" class="content-display">
+                <h2>Maayong Pag-abot!</h2>
+                <p>Pili sa menu sa taas para magsugod sa imong kalingawan.</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
