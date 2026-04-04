@@ -150,3 +150,38 @@ body {
     border-radius: 15px;
     margin-top: 20px;
 }
+
+
+/* Para sa Mobile Devices (Smartphones) */
+@media screen and (max-width: 600px) {
+    /* Himoon natong vertical ang login area */
+    .auth-section {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .auth-section input {
+        width: 100%; /* Full width sa mobile */
+    }
+
+    /* I-stack ang navigation buttons para dali mapindot */
+    .main-nav {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .nav-item {
+        flex: 1 1 40%; /* Duha ka button matag row sa mobile */
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .glass-card {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .logo {
+        width: 80%; /* Pakunhoran ang logo sa mobile */
+    }
+}
