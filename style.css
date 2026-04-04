@@ -9,9 +9,10 @@
 body {
     background-image: url('bg.jpg');
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -23,8 +24,6 @@ body {
     -webkit-backdrop-filter: blur(15px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     padding: 15px 5%;
-    position: sticky;
-    top: 0;
     z-index: 1000;
 }
 
@@ -33,6 +32,7 @@ body {
     justify-content: flex-end;
     align-items: center;
     gap: 10px;
+    flex-wrap: wrap; /* Para mo-bagsak sa ubos kung gamay ang screen */
 }
 
 .auth-section input {
@@ -42,15 +42,10 @@ body {
     border-radius: 8px;
     color: white;
     outline: none;
-}
-
-.auth-section input::placeholder {
-    color: rgba(255, 255, 255, 0.7);
+    max-width: 150px; /* Limit para dili molapas */
 }
 
 .btn-login {
-    background: #00d2ff;
-    background: -webkit-linear-gradient(to right, #3a7bd5, #00d2ff);
     background: linear-gradient(to right, #3a7bd5, #00d2ff);
     border: none;
     padding: 10px 20px;
@@ -58,19 +53,6 @@ body {
     font-weight: bold;
     border-radius: 8px;
     cursor: pointer;
-    transition: 0.3s;
-}
-
-.btn-login:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 210, 255, 0.4);
-}
-
-.auth-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    opacity: 0.8;
 }
 
 /* Main Content Card */
@@ -87,45 +69,36 @@ body {
     backdrop-filter: blur(20px);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 40px;
-    width: 100%;
+    padding: 30px;
+    width: 95%; /* Hapit full width sa mobile */
     max-width: 800px;
     text-align: center;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 .logo {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
     margin-bottom: 20px;
-}
-
-.divider {
-    border: 0;
-    height: 1px;
-    background: rgba(255, 255, 255, 0.2);
-    margin: 20px 0;
 }
 
 /* Menu Buttons */
 .main-nav {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
     margin-bottom: 30px;
+    flex-wrap: wrap; /* Importante para sa Mobile! */
 }
 
 .nav-item {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: white;
-    padding: 12px 25px;
+    padding: 10px 15px;
     border-radius: 50px;
     cursor: pointer;
-    transition: 0.3s;
-}
-
-.nav-item:hover {
-    background: rgba(255, 255, 255, 0.3);
+    font-size: 14px;
 }
 
 .content-display {
@@ -133,55 +106,19 @@ body {
     min-height: 150px;
 }
 
-.signup-form input {
-    width: 80%;
-    max-width: 300px;
-    padding: 10px;
-    margin: 5px 0;
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
-    color: white;
-}
-
-.grid-placeholder {
-    padding: 20px;
-    border: 2px dashed rgba(255, 255, 255, 0.3);
-    border-radius: 15px;
-    margin-top: 20px;
-}
-
-
-/* Para sa Mobile Devices (Smartphones) */
-@media screen and (max-width: 600px) {
-    /* Himoon natong vertical ang login area */
+/* MOBILE FIXES */
+@media screen and (max-width: 480px) {
     .auth-section {
-        flex-direction: column;
-        gap: 8px;
+        justify-content: center;
     }
-
+    
     .auth-section input {
-        width: 100%; /* Full width sa mobile */
+        max-width: 100%;
+        width: 100%;
     }
-
-    /* I-stack ang navigation buttons para dali mapindot */
-    .main-nav {
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
+    
     .nav-item {
-        flex: 1 1 40%; /* Duha ka button matag row sa mobile */
-        padding: 10px 15px;
-        font-size: 14px;
-    }
-
-    .glass-card {
-        padding: 20px;
-        margin: 10px;
-    }
-
-    .logo {
-        width: 80%; /* Pakunhoran ang logo sa mobile */
+        width: 45%; /* Duha ka column sa mobile */
+        text-align: center;
     }
 }
