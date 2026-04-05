@@ -1,44 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+	
+	
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Tambayan - All-in-One</title>
     <link rel="stylesheet" href="style.css">
 </head>
+	
+	
+	
 <body>
+	
+<heading class="heading">
+	<div class="auth-section" id="login-form">
+		<input type="text" id="username" placeholder="👤 Username">
+		<input type="password" id="password" placeholder="🔒 Password">
+		<button class="btn-login" onclick="login()">Sign In</button>
+		
+		<div class="auth-links">
+			<a href="#" onclick="showSection('signup')">Create Account</a>
+		</div>
+		
+		<div id="user-welcome" style="display:none; color:white;"></div>
+	</div>
+</heading>
 
-    <header class="navbar">
-        <div class="auth-section" id="login-form">
-            <input type="text" id="username" placeholder="👤 Username">
-            <input type="password" id="password" placeholder="🔒 Password">
-            <button class="btn-login" onclick="login()">Sign In</button>
-            <div class="auth-links">
-                <a href="#" onclick="showSection('signup')">Create Account</a>
-            </div>
-        </div>
-        <div id="user-welcome" style="display:none; color:white;"></div>
-    </header>
+<main class="main">
+	<div class="main-content">
+		<img src="onlinetambayan.png" alt="Logo" class="logo">
+		
+		<nav class="main-nav">
+			<button class="nav-sec" onclick="showSection('home')">🏠 Home</button>
+			<button class="nav-sec" onclick="showSection('movies')">🎬 Movies</button>
+			<button class="nav-sec" onclick="showSection('music')">🎵 Music</button>
+			<button class="nav-sec" onclick="showSection('shopping')">🛒 Shopping</button>
+			<button class="nav-sec" onclick="showSection('about')">ℹ️ About</button>
+		</nav>
 
-    <main class="hero-section">
-        <div class="glass-card">
-            <img src="onlinetambayan.png" alt="Logo" class="logo">
-            
-            <nav class="main-nav">
-                <button class="nav-item" onclick="showSection('home')">🏠 Home</button>
-                <button class="nav-item" onclick="showSection('movies')">🎬 Movies</button>
-                <button class="nav-item" onclick="showSection('music')">🎵 Music</button>
-                <button class="nav-item" onclick="showSection('shopping')">🛒 Shopping</button>
-                <button class="nav-item" onclick="showSection('about')">ℹ️ About</button>
-            </nav>
+		<div id="display-area" class="content-display">
+			<h2>Maayong Pag-abot!</h2>
+			<p>Pili sa menu sa taas para magsugod sa imong kalingawan.</p>
+		</div>
+		
+		<div style="margin-top: 30px; border-top: 1px solid #f1f5f9; padding-top: 15px;">
+			<p style="font-size: 11px; color: floralwhite; text-transform: uppercase; letter-spacing: 0.5px; margin: 0;">
+			<font style="color: honeydew"><b>Online tambayan</b></font><br>
+			<i>Developed by</i>&nbsp;<strong style="color: darkgray">Black Panther Group</strong>
+			</p>
+		</div>	
+			
+	</div>
+</main>
 
-            <div id="display-area" class="content-display">
-                <h2>Maayong Pag-abot!</h2>
-                <p>Pili sa menu sa taas para magsugod sa imong kalingawan.</p>
-            </div>
-        </div>
-    </main>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
