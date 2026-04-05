@@ -21,7 +21,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    min-height: 50vh;
+    min-height: 20vh;
     display: flex;
     flex-direction: column;
 
